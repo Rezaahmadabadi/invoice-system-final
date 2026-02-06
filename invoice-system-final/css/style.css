@@ -1,0 +1,300 @@
+/* ==================== FILE: css/style.css ==================== */
+/* ذخیره در: C:/xampp/htdocs/invoice-system-final/css/style.css */
+
+/* Reset و تنظیمات پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* هدر اصلی */
+.main-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* نویگیشن */
+.main-nav {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-active {
+    background: #2c3e50;
+    color: white !important;
+}
+
+/* محتوای اصلی */
+.main-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #f1f2f6;
+}
+
+.hero h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* کارت‌های ویژگی */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 5px solid #3498db;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.feature-card ul {
+    list-style: none;
+    padding-right: 0;
+}
+
+.feature-card li {
+    padding: 8px 0;
+    padding-right: 25px;
+    position: relative;
+}
+
+.feature-card li:before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* راهنمای راه‌اندازی */
+.setup-guide {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.setup-guide h3 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border-right: 4px solid #ddd;
+}
+
+.step.completed {
+    border-right-color: #2ecc71;
+    background: #f7fdf9;
+}
+
+.step.current {
+    border-right-color: #3498db;
+    background: #f0f7ff;
+}
+
+.step-number {
+    background: #2c3e50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.step.completed .step-number {
+    background: #2ecc71;
+}
+
+.step.current .step-number {
+    background: #3498db;
+}
+
+.step strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* دکمه‌های CTA */
+.cta-buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+/* فوتر */
+.main-footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #7f8c8d;
+    border-top: 1px solid #eee;
+}
+
+.main-footer code {
+    background: #f1f2f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+}
+
+/* ==================== END OF FILE ==================== */
